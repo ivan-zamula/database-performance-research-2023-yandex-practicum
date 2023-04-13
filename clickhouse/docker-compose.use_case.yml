@@ -1,0 +1,58 @@
+services:
+
+  test:
+    build:
+      context: "./"
+      target: "use_case"
+    container_name: research_test
+    depends_on:
+      - zookeeper
+      - clickhouse-node1
+    environment:
+      host: clickhouse-node1
+
+  zookeeper:
+    image: zookeeper:3.5
+    container_name: ugc_zookeeper
+    hostname: zookeeper
+    ports:
+      - "2181:2181"
+
+  clickhouse-node1:
+    image: yandex/clickhouse-server:20.4
+    container_name: research_ugc_clickhouse-node1
+    hostname: clickhouse-node1
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+    volumes:
+      - ./clickhouse/data/node1:/etc/clickhouse-server
+    depends_on:
+      - zookeeper
+
+  clickhouse-node2:
+    image: yandex/clickhouse-server:20.4
+    container_name: research_ugc_clickhouse-node2
+    hostname: clickhouse-node2
+    volumes:
+      - ./clickhouse/data/node2:/etc/clickhouse-server
+    depends_on:
+      - zookeeper
+
+  clickhouse-node3:
+    image: yandex/clickhouse-server:20.4
+    container_name: research_ugc_clickhouse-node3
+    hostname: clickhouse-node3
+    volumes:
+      - ./clickhouse/data/node3:/etc/clickhouse-server
+    depends_on:
+      - zookeeper
+
+  clickhouse-node4:
+    image: yandex/clickhouse-server:20.4
+    container_name: research_ugc_clickhouse-node4
+    hostname: clickhouse-node4
+    volumes:
+      - ./clickhouse/data/node4:/etc/clickhouse-server
+    depends_on:
+      - zookeeper

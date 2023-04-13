@@ -1,0 +1,192 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+# .env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+.env
+.env_db
+.env_etl
+.env_etl.srv
+.env_local
+.env_database
+.env_database.srv
+.env_backend
+.env_elastic
+.env_elastic.srv
+.env_redis
+.env_redis.srv
+.env_fastapi
+.env_fastapi.srv
+.env_backoff
+.env_tests
+.env_mongo
+# .env.example
+# .env_db.example
+faker_data.py
+_test.py
+test_items.py
+_set.py
+_cfg.py
+rrr.py
+etl/context/etl_settings.py
+sql_commands.txt
+trash
+.idea/
+connection_manager.py
+connection_tools.py
+_load_data.py
+_.pre-commit-config.yaml
+logs/
+log/
+fastapi-movies/src/api/v1/routers/trash_.py
+fastapi-movies/src/api/v1/routers/films_.py
+fastapi-movies/src/services/film_.py
+trash_
+
+## to delete
+tests/functional/src/_trash.py
+tests/functional/src/_try.py
+tests/functional/test_all.py
+services/film_.py
+##
+/auth-flask/src/db/db.py
+/auth-flask/src/db/db_querys.py
+/auth-flask/src/api/v1/app.py
+/auth-flask/src/html_pages/
+/auth-flask/src/_trash.py
+/auth-flask/src/api/v1/user/wtf.py
+/docker_env/auth_api/.env_auth_api.srv
+/docker_env/auth_api/.env_auth_settings
+/docker_env/auth/auth_api/.env_auth_api.srv
+/docker_env/auth/auth_api/.env_auth_settings
+/docker_env/auth/auth_api/.env_auth_credentials
+/docker_env/jaeger/.env_jaeger
+/docker_env/kafka/.env_kafka
+/docker_env/clickhouse/.env_clickhouse
+/docker_env/clickhouse/.env_clickhouse.auth
+/docker_env/mongo/.env_mongo
+/trash.py

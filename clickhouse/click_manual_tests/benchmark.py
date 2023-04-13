@@ -1,0 +1,11 @@
+
+import time
+
+
+def benchmark(func):
+    def wrapper(*args, **kwargs):
+        t = time.perf_counter()
+        res = func(*args, **kwargs)
+        print(func.__name__, time.perf_counter() - t)
+        return res
+    return wrapper

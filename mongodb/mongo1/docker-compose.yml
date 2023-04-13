@@ -1,0 +1,32 @@
+services:
+  mongo1:
+    container_name: mongo1
+    image: mongo
+    ports:
+      - 27017:27017
+    restart: always
+    command: mongod --replSet myReplicaSet
+  mongo2:
+    container_name: mongo2
+    image: mongo
+    ports:
+      - 27018:27017
+    restart: always
+    command: mongod --replSet myReplicaSet
+  single_mongo:
+    container_name: single_mongo
+    image: mongo
+    ports:
+      - 27020:27017
+    restart: always
+  backend:
+    build: ./
+    container_name: backend
+    image: backend
+    environment:
+      recs_num: 10000000
+      batch_size: 100000
+    depends_on:
+      - mongo1
+      - mongo2
+      - single_mongo
